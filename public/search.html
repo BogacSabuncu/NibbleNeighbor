@@ -101,20 +101,13 @@
     <h2 id=titles class="title is-3 has-text-centered has-text-white">Protein</h2>
         <div class="field has-addons has-addons-centered">
                 <div class="control">
-                  <div class="select is-large">
-                    <select id="protein_id" name="protein">
-                      <option value="chicken">Protein</option>
-                      <option value="chicken">Chicken</option>
-                      <option value="beef">Beef</option>
-                      <option value="pork">Pork</option>
-                      <option value="tofu">Tofu</option>
-                      <option value="fish">Fish</option>
-                    </select>
+                  <div class="is-large" id="ingredientContainer">
+                    <input id="ingredientInput1">
                   </div>
                 </div>
                 <div class="control">
-                  <button type="submit" class="button is-success is-large is-hovered">
-                    <span><i class="fa fa-drumstick-bite"></i></span>Choose Protein</button>
+                  <button class="button is-success is-large is-hovered" id="addIngredientBtn">
+                    <span><i class="fa fa-drumstick-bite"></i></span>add another ingredient</button>
                 </div>
               </div>
 <!--Diet-->
@@ -282,7 +275,7 @@
     
   
   </section>
-  <script src="../assets/app.js"></script>
+  <script src="assets/app.js"></script>
 <script src="javascript/btns.js"></script>
 
   </body>

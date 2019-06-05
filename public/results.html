@@ -151,10 +151,11 @@
     <script>
         $(document).ready(function () {
             const queryString = window.location.search;
+            console.log(queryString);
 
             if (queryString) {
                 const queryUrl = "https://api.edamam.com/search" + queryString + "&app_id=26abcd0f&app_key=448f552b9ad5ea4e801639160282843c";
-
+                console.log(queryUrl);
                 $.ajax({
                     url: queryUrl,
                     method: "GET"
@@ -174,7 +175,6 @@
                         console.log("label: ", url);
                         console.log("label: ", calories);
                     };
-
                 });
             }
         });

@@ -2,8 +2,8 @@
 try {
     $("#submitBtn").on("click", function(){
         console.log("clicked");
-        const protein=$("#protein_id").val();
-        console.log(protein);
+        const ingredientList=combineIngredients();
+        console.log(ingredientList);
         const diet=$("#diet_id").val();
         console.log(diet);
         const health=$("#health_id").val();
@@ -15,7 +15,7 @@ try {
     
         
         const queryParams = $.param({
-            "q": protein,
+            "q": ingredientList,
             "diet": diet,
             "health":health,
             "calorie": calorie,
@@ -59,8 +59,30 @@ function recipeRender(image,label,calories,url) {
         </div>
       </div>
         `);
+};
+let ingredientCount = 2;
+function ingredients(count) {
+$("#ingredientContainer").append(`<br><input id="ingredientInput${count}" placeholder="ingredient #${count}">`);
+};
+
+$("#addIngredientBtn").on("click", (e)=> {
+  e.preventDefault();
+  ingredients(ingredientCount);
+  ingredientCount++;
+});
+
+function combineIngredients() {
+  if($("#ingredientInput2").val()){
+  let ingredientString = "";
+  for(i=2; i < ingredientCount; i++){
+    ingredientString += "&q=" + $(`#ingredientInput${i}`).val();
+  };
+  console.log(ingredientString)
+  return $("#ingredientInput1").val()+ingredientString;
+} else {
 }
 
+}
 
 
 
