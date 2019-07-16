@@ -4,6 +4,8 @@
 
 Nibble Neighbor is a full-stack app that lets the user create an account and then search and save recipes to their profile. The search is done by making an API call to Edamam to get recipes and then the results are displayed to the user on the page. When the user saves a recipe the necessary information is saved to a MySQL database where the information can be retrieved about a specific user when needed.
 
+![Image of HomeScreen](./public/assets/images/home-screen.png)
+
 ### Technologies Used
 
 - HTML/CSS
@@ -12,14 +14,18 @@ Nibble Neighbor is a full-stack app that lets the user create an account and the
 - Express.js
 - MySQL
 
+![Image of Search Screen](./public/assets/images/search-screen.png)
 ### Future Improvements
 
 - Adding functionality to search with specific ingredients for recipes.
 - Adding a social functionality that allows users to create meet ups
 
+
 ### Links
 
 - [Application](https://nibbleneighbor.herokuapp.com/)
+
+![Image of HomeScreen](./public/assets/images/user-page.png)
 
 ### Meet the Team
 
